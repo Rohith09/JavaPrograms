@@ -3,10 +3,12 @@ package pkg1darray;
 public class Main {
 
     public static void main(String[] args) {
-        int a[] = new int []{4,5,6,7,8,9};
+        int a[] = new int []{1,2,3,4,5,6,7,8,9,10};
         ArrayOp.print(a);
         ArrayOp ao = new ArrayOp();
         System.out.println("The sum of the elements in the array is "+ao.add(a));
+        System.out.println("The max element in the array is "+ao.max(a));
+
         
     }
     
@@ -30,5 +32,18 @@ class ArrayOp
         return s;
 
     }
+       int max(int a[])       //Method to find the max element of the given array.
+       {
+           int max=a[0];
+           for (int x:a)
+           {
+               if(x>max)
+               {
+                   max=x;
+               }
+           }
+           
+           return max;
+       }
 }
  
