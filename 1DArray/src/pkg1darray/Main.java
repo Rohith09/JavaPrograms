@@ -8,6 +8,7 @@ public class Main {
         ArrayOp ao = new ArrayOp();
         System.out.println("The sum of the elements in the array is "+ao.add(a));
         System.out.println("The max element in the array is "+ao.max(a));
+        System.out.println("The max element in the array is "+ao.min(a));
 
         
     }
@@ -44,6 +45,19 @@ class ArrayOp
            }
            
            return max;
+       }
+              int min(int a[])       //Method to find the min element of the given array.
+       {
+           int min=a[0];
+           for (int x:a)
+           {
+               if(x<min)
+               {
+                   min=x;
+               }
+           }
+           
+           return min;
        }
 }
  
