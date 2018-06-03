@@ -5,6 +5,8 @@ public class Main {
     public static void main(String[] args) {
         int a[][]= new int [][]{{1,2,3},{4,5,6},{7,8,9}};
         ArrayOp.print(a);
+        ArrayOp ao = new ArrayOp();
+        System.out.println("Sum= "+ao.add(a));
         
     }
     
@@ -21,5 +23,18 @@ class ArrayOp
             }
             System.out.println();
         }
+    }
+    int add(int a[][])      //Method to find the sum of the elements in the 2D array.
+            
+    {
+        int s=0;
+        for(int x[]:a)
+        {
+            for(int y:x)
+            {
+                s+=y;
+            }
+        }
+       return s;
     }
 }
