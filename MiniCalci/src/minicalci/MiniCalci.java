@@ -136,25 +136,25 @@ class Gui extends Frame
         t2.setBounds(100, 60, 180, 20);
         p.add(t2);
         b1 = new Button("+");
-        b1.addActionListener(new A());
+        b1.addActionListener(new A());//registering the action listener.
         b1.setBackground(Color.YELLOW);
         b1.setForeground(Color.red);
         b1.setBounds(20, 100, 40, 30);
         p.add(b1);
         b2 = new Button("-");
-        b2.addActionListener(new B());
+        b2.addActionListener(new B());//registering the action listener.
         b2.setBackground(Color.YELLOW);
         b2.setForeground(Color.red);
         b2.setBounds(80, 100, 40, 30);
         p.add(b2);
         b3 = new Button("*");
-        b3.addActionListener(new C());
+        b3.addActionListener(new C());//registering the action listener.
         b3.setBackground(Color.YELLOW);
         b3.setForeground(Color.red);
         b3.setBounds(140, 100, 40, 30);
         p.add(b3);
         b4 = new Button("/");
-        b4.addActionListener(new D());
+        b4.addActionListener(new D());//registering the action listener.
         b4.setBackground(Color.YELLOW);
         b4.setForeground(Color.red);
         b4.setBounds(200, 100, 40, 30);
