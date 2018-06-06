@@ -8,10 +8,9 @@ class Gui extends Frame
     Gui()
     {
         Frame f = new Frame();
-        f.setVisible(true);
-        f.setLayout(null);
-        f.setSize(400, 400);
-        f.setTitle("First GUI Application");
+        setLayout(null);
+        setSize(400, 400);
+        setTitle("First GUI Application");
         Button b = new Button("OK");
         b.setBounds(50, 50, 50, 50);
         f.add(b);
@@ -28,6 +27,7 @@ public class FirstGuiApp {
 public static void main(String[] args) {
 
     Gui g = new Gui();
+    g.setVisible(true);
 }
     
 }
