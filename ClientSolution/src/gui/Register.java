@@ -1,21 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package gui;
 
-/**
- *
- * @author chandrassekhar
- */
+import javax.swing.JOptionPane;
+
 public class Register extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Register
-     */
+
     public Register() {
         initComponents();
+    }
+
+    public Register(String n) {
+        setTitle("Welcome "+n);
     }
 
     /**
@@ -38,20 +34,20 @@ public class Register extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        n = new javax.swing.JTextField();
+        g2 = new javax.swing.JRadioButton();
+        g1 = new javax.swing.JRadioButton();
+        g3 = new javax.swing.JRadioButton();
+        c = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
+        a = new javax.swing.JTextArea();
+        l1 = new javax.swing.JCheckBox();
+        l2 = new javax.swing.JCheckBox();
+        l3 = new javax.swing.JCheckBox();
+        l4 = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
+        d = new com.toedter.calendar.JDateChooser();
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -106,48 +102,53 @@ public class Register extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel7.setText("LANGUAGE:");
 
-        jTextField1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        n.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
 
-        bg.add(jRadioButton1);
-        jRadioButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jRadioButton1.setText("FEMALE");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        bg.add(g2);
+        g2.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        g2.setText("FEMALE");
+        g2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                g2ActionPerformed(evt);
             }
         });
 
-        bg.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jRadioButton2.setText("MALE");
+        bg.add(g1);
+        g1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        g1.setText("MALE");
 
-        bg.add(jRadioButton3);
-        jRadioButton3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jRadioButton3.setText("OTHER");
+        bg.add(g3);
+        g3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        g3.setText("OTHER");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "India", "China", "Australia", "England", "USA", " " }));
+        c.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "India", "China", "Australia", "England", "USA", " " }));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        a.setColumns(20);
+        a.setRows(5);
+        jScrollPane1.setViewportView(a);
 
-        jCheckBox1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jCheckBox1.setText("ENGLISH");
+        l1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        l1.setText("ENGLISH");
 
-        jCheckBox2.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jCheckBox2.setText("HINDI");
+        l2.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        l2.setText("HINDI");
 
-        jCheckBox3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jCheckBox3.setText("FRENCH");
+        l3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        l3.setText("FRENCH");
 
-        jCheckBox4.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jCheckBox4.setText("SPANISH");
+        l4.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        l4.setText("SPANISH");
 
         jButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
         jButton1.setText("CLEAR");
 
         jButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
         jButton2.setText("REGISTER");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -171,22 +172,22 @@ public class Register extends javax.swing.JFrame {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jCheckBox4)
-                                    .addComponent(jCheckBox1))
+                                    .addComponent(l4)
+                                    .addComponent(l1))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jCheckBox2)
+                                .addComponent(l2)
                                 .addGap(18, 18, 18)
-                                .addComponent(jCheckBox3))
+                                .addComponent(l3))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jDateChooser2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(d, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jRadioButton2)
+                                    .addComponent(g1)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jRadioButton1)
+                                    .addComponent(g2)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jRadioButton3))
-                                .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(g3))
+                                .addComponent(n, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(c, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -205,21 +206,21 @@ public class Register extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(n, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3))
+                    .addComponent(g2)
+                    .addComponent(g1)
+                    .addComponent(g3))
                 .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(d, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(c, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
@@ -230,11 +231,11 @@ public class Register extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox3))
+                    .addComponent(l1)
+                    .addComponent(l2)
+                    .addComponent(l3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox4)
+                .addComponent(l4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
@@ -398,9 +399,9 @@ public class Register extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void g2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_g2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_g2ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
@@ -409,6 +410,52 @@ public class Register extends javax.swing.JFrame {
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        String name = n.getText();
+        java.util.Date dt = d.getDate();
+        String address = a.getText();
+        if(dt!= null && !name.equals("")&& !address.equals(""))
+        {
+            String gender="";
+            if(g1.isSelected())
+            {
+                gender=g1.getText();
+            }
+            else if(g2.isSelected()){
+                gender=g2.getText();
+            }
+            else
+            {
+                gender = g3.getText();
+            }
+            String country = (String) c.getSelectedItem(); //returns object so we have to cast it into string
+            String language =" ";
+            if(l1.isSelected())
+            {
+                language +=l1.getText()+"/";
+            }
+            if(l2.isSelected())
+            {
+                language += l2.getText()+"/";
+            }
+            if(l3.isSelected())
+            {
+                language += l3.getText()+"/";
+            }
+            if(l4.isSelected())
+            {
+                language += l4.getText()+"/";
+            }
+            language = language.substring(0,language.length()-1);
+           
+              
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Please fill all the details");
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -446,16 +493,16 @@ public class Register extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea a;
     private javax.swing.ButtonGroup bg;
+    private javax.swing.JComboBox<String> c;
+    private com.toedter.calendar.JDateChooser d;
+    private javax.swing.JRadioButton g1;
+    private javax.swing.JRadioButton g2;
+    private javax.swing.JRadioButton g3;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -487,12 +534,12 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JCheckBox l1;
+    private javax.swing.JCheckBox l2;
+    private javax.swing.JCheckBox l3;
+    private javax.swing.JCheckBox l4;
+    private javax.swing.JTextField n;
     // End of variables declaration//GEN-END:variables
 }
