@@ -142,6 +142,11 @@ public class Register extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
         jButton1.setText("CLEAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
         jButton2.setText("REGISTER");
@@ -489,6 +494,20 @@ public class Register extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"Please fill all the details");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        n.setText(null);
+        g1.setSelected(true);
+        d.setDate(null);
+        c.setSelectedItem("India");
+        a.setText(null);
+        l1.setSelected(true);
+        l2.setSelected(false);
+        l3.setSelected(false);
+        l4.setSelected(false);
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
