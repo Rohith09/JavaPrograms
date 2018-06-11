@@ -56,13 +56,14 @@ public class Register extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        dL1 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
+        dL3 = new javax.swing.JLabel();
+        dL4 = new javax.swing.JLabel();
+        dL5 = new javax.swing.JLabel();
+        dL6 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        dL2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -269,26 +270,28 @@ public class Register extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel14.setText("LANGUAGE:");
 
-        jLabel15.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel15.setText("_____________________________");
+        dL1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        dL1.setText("_____________________________");
 
         jLabel16.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel16.setText("_____________________________");
 
-        jLabel17.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel17.setText("_____________________________");
+        dL3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        dL3.setText("_____________________________");
 
-        jLabel18.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel18.setText("_____________________________");
+        dL4.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        dL4.setText("_____________________________");
 
-        jLabel19.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel19.setText("_____________________________");
+        dL5.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        dL5.setText("_____________________________");
 
-        jLabel20.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel20.setText("_____________________________");
+        dL6.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        dL6.setText("_____________________________");
 
         jButton3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jButton3.setText("BACK");
+
+        dL2.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        dL2.setText("_____________________________");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -304,14 +307,17 @@ public class Register extends javax.swing.JFrame {
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(dL4, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(dL5, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(dL6, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(dL3, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dL2))
+                    .addComponent(dL1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(203, 203, 203)
@@ -326,27 +332,28 @@ public class Register extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jLabel15))
+                    .addComponent(dL1))
                 .addGap(39, 39, 39)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(jLabel16))
+                    .addComponent(jLabel16)
+                    .addComponent(dL2))
                 .addGap(43, 43, 43)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jLabel17))
+                    .addComponent(dL3))
                 .addGap(44, 44, 44)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(jLabel18))
+                    .addComponent(dL4))
                 .addGap(47, 47, 47)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
-                    .addComponent(jLabel19))
+                    .addComponent(dL5))
                 .addGap(43, 43, 43)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(jLabel20))
+                    .addComponent(dL6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addGap(25, 25, 25))
@@ -448,7 +455,33 @@ public class Register extends javax.swing.JFrame {
                 language += l4.getText()+"/";
             }
             language = language.substring(0,language.length()-1);
-           
+           try{
+               db.DbConnect.insertClient.setString(1, name);
+               db.DbConnect.insertClient.setString(2, gender);
+               //Date in java is stored in java.sql.Date but my sql dosent support that format so we need to convert it to java.sql.Date
+               java.sql.Date dob = new java.sql.Date(dt.getTime());
+               db.DbConnect.insertClient.setDate(3, dob);
+               db.DbConnect.insertClient.setString(4, country);
+               db.DbConnect.insertClient.setString(5, address);
+               db.DbConnect.insertClient.setString(6, language);
+               db.DbConnect.insertClient.executeUpdate();
+               dL1.setText(name);
+               dL2.setText(gender);
+               dL3.setText(dob.toString());
+               dL4.setText(country);
+               dL5.setText(address);
+               dL6.setText(language);
+               
+               java.awt.Container ct = getContentPane();
+               java.awt.CardLayout cd = (java.awt.CardLayout)ct.getLayout();
+               cd.show(ct, "2");
+               
+           }   
+           catch(Exception ex)
+           {
+               ex.printStackTrace();
+               JOptionPane.showMessageDialog(null, ex);
+           }
               
         }
         else
@@ -497,6 +530,12 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.ButtonGroup bg;
     private javax.swing.JComboBox<String> c;
     private com.toedter.calendar.JDateChooser d;
+    private javax.swing.JLabel dL1;
+    private javax.swing.JLabel dL2;
+    private javax.swing.JLabel dL3;
+    private javax.swing.JLabel dL4;
+    private javax.swing.JLabel dL5;
+    private javax.swing.JLabel dL6;
     private javax.swing.JRadioButton g1;
     private javax.swing.JRadioButton g2;
     private javax.swing.JRadioButton g3;
@@ -509,13 +548,8 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
