@@ -7,7 +7,7 @@ public class DbConnect {
     static public PreparedStatement insertClient;
     static{
         try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
              c = DriverManager.getConnection("jdbc:mysql://localhost:3306/clientdb3pm","root","rohith009");
             st = c.createStatement();
             insertClient = c.prepareStatement("insert into client_info (name,gender,dob,country,address,language) values (?,?,?,?,?,?)");

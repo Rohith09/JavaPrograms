@@ -11,7 +11,9 @@ public class Register extends javax.swing.JFrame {
     }
 
     public Register(String n) {
+        initComponents();
         setTitle("Welcome "+n);
+       setLocationRelativeTo(null);
     }
 
     /**
@@ -494,7 +496,7 @@ public class Register extends javax.swing.JFrame {
                
                java.awt.Container ct = getContentPane();
                java.awt.CardLayout cd = (java.awt.CardLayout)ct.getLayout();
-               cd.show(ct, "2");
+               cd.show(ct, "3");
                
            }   
            catch(Exception ex)

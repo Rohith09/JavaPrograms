@@ -156,7 +156,7 @@ public class Login extends javax.swing.JFrame {
             String s1 = u.getText();
             String s2 = String.valueOf(p.getPassword());
             ResultSet rs = db.DbConnect.st.executeQuery(
-            "select * from admin_login where aid='"+s1+"' and '"+s2+"'");
+            "select * from admin_login where aid='"+s1+"' and pass='"+s2+"'");
             if(rs.next())
             {
                 String n = rs.getString(3);
