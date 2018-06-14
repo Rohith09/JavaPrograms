@@ -4,7 +4,7 @@ class A
 	{
 		for (int i=0;i<=5;i++)
 		{
-			for(int j=1;j<=5;j++)
+			for(int j=1;j<=i;j++)
 			{
 				System.out.print("*");
 			}
@@ -12,12 +12,12 @@ class A
 		}
 	}
 }
-class pattern1
+class pattern2
 {
 	public static void main(String args[])
 	{
-		A a = new A();
-		a.print();
+			A a = new A();
+	 		a.print();
 	}
-	
+
 }
