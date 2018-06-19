@@ -30,3 +30,11 @@ class pattern12
 		a.print();
 	}
 }
+
+/*Pattern 
+*****
+ ****
+  ***
+   **
+    *
+*/    
