@@ -9,15 +9,27 @@ class A
 		{
 			arr2[i]=Integer.valueOf(arr[i]);
 		}
-		arr2[0]+=12;
+		String t[] = a.split("[0-9]|:");
+		for (int i=0;i<t.length;i++)
+		{
+			if (t[i].equals("PM"))
+			{
+				arr2[0]+=12;	
+			}
+		}
 		for(int j=0;j<=arr2.length-1;j++)
 		{
 			if(j==arr2.length-1)
-			{
-				b+=String.valueOf(arr2[j]);
+			{     if (arr2[j]/10==0)
+	                        b=b+z+String.valueOf(arr2[j]);
+			       else
+				b+=String.valueOf(arr2[j]);	
 				break;
 			}
-			b+=String.valueOf(arr2[j])+":";
+			if (arr2[j]/10==0)
+	                        b=b+z+String.valueOf(arr2[j])+":";
+			       else
+				b+=String.valueOf(arr2[j])+":";
 		}
 		System.out.println(b);
 	}
