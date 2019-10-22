@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Custom Context Menu Implementation</title>
+	<style type="text/css">
+		.container{
+			background-color: white;
+			height:100px;
+		}
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{	
+			font-family: verdana;
+			font-size: 12px;
+		}
+
+		.context-menu,.context-menu-Text{
+			width:200px;
+			height:auto;
+			box-shadow: 0 0 20px 0 #ccc;
+			position:absolute;
+			display:none;
+
+		}
+
+		.context-menu ul,.context-menu-Text ul{
+			list-style: none;
+			padding: 5px 0px 5px 0px;
+		}	
+
+		.context-menu ul li,.context-menu-Text ul li{
+			padding : 10px 5px 10px 5px;
+			border-left: 4px solid ;
+			cursor: pointer;
+
+		}
+
+		.context-menu ul li:hover,.context-menu-Text ul li:hover{
+			background: #eee;
+			border-left:4px solid #666;
+		}
+		
+
+		.hr{
+			 border-top: 1px solid red;
+			 border-bottom: 1px solid red;
+
+		}
+
+
+ 		.h1{
+ 			margin-top:30px;
+ 		}
+
+
+ 		#dialogoverlay{
+			display: none;
+			opacity: .8;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			background: #FFF;
+			width: 100%;
+			z-index: 10;
+		}
+		#dialogbox{
+			display: none;
+			position: fixed;
+			background: #000;
+			border-radius:7px; 
+			width:550px;
+			z-index: 10;
+		}
+		#dialogbox > div{ background:#FFF; margin:8px; }
+		#dialogbox > div > #dialogboxhead{ background: #666; font-size:19px; padding:10px; color:#CCC; }
+		#dialogbox > div > #dialogboxbody{ background:#333; padding:20px; color:#FFF; }
+		#dialogbox > div > #dialogboxfoot{ background: #666; padding:10px; text-align:right; }
+	</style>
+</head>
+<body>
+
+
+	<div class="container" oncontextmenu=" return showContextMenu(event);">
+		<div id="contextMenu" class="context-menu">	
+			<ul id="ul">
+				<li id="optA" class="menu" onclick="Alert.render('Option A');"> Option A </li>
+				<li id="optB" class="menu" onclick="Alert.render('Option B');"> Option B </li>
+				<li id="optC" class="menu" onclick="Alert.render('Option C');"> Option C </li>
+				<li id="optD" class="menu" onclick="Alert.render('Option D');"> Option D </li>
+				<li id="optE" class="menu" onclick="Alert.render('Option E');"> Option E </li>	
+			</ul>
+		</div>
+	</div>
+		<hr class="hr"> 
+
+		<h1 class="container2" oncontextmenu=" return showContextMenuText(event);"> Text Here </h1>
+		<div id="contextMenuText" class="context-menu-Text">	
+			<ul>
+				<li> Option 1 </li>
+				<li> Option 2 </li>
+				<li> Option 3 </li>
+				<li> Option 4 </li>
+				<li> Option 5 </li>	
+			</ul>
+		</div>	
+
+
+	<div id="dialogoverlay"></div>
+		<div id="dialogbox">
+  			<div>
+    			<div id="dialogboxhead"></div>
+    			<div id="dialogboxbody"></div>
+    			<div id="dialogboxfoot"></div>
+  			</div>
+		</div>	
+</body>
+<script>
+	window.onclick=hideContextMenu;  //to hide the context menu by clicking on the window
+	window.onclick=hideContextMenuText;  //to hide the context menu by clicking on the window
+	window.onkeydown = listenkeys;  //to hide the context menu on click of the escape button
+
+	var contextMenu = document.getElementById('contextMenu');
+	var contextMenuText = document.getElementById('contextMenuText');
+
+	function showContextMenu(event) //for display
+	{
+		contextMenu.style.display='block';
+		contextMenu.style.left=event.clientX+'px';
+		contextMenu.style.top=event.clientY+'px';
+		return false;
+	}
+	function showContextMenuText(event) //for display
+	{
+		contextMenuText.style.display='block';
+		contextMenuText.style.left=event.clientX+'px';
+		contextMenuText.style.top=event.clientY+'px';
+		return false;
+	}
+
+	function hideContextMenu() //for hiding
+	{
+		contextMenu.style.display='none';
+	}
+	
+	function hideContextMenuText() //for hiding
+	{
+		contextMenuText.style.display='none';
+	}
+
+	function listenkeys(event)
+	{
+		var keyCode = event.which || event.keyCode;
+		if(keyCode==27)
+		{
+			hideContextMenu();
+		}
+	} //script for attaching different context menus for different elements.
+
+	contextMenu.addEventListener('click', function()
+	{
+		var select = document.querySelectorAll('.menu');		
+	},true);
+	function CustomAlert()
+	{
+    	this.render = function(dialog)
+    	{
+		        var winW = window.innerWidth;
+		        var winH = window.innerHeight;
+		        var dialogoverlay = document.getElementById('dialogoverlay');
+		        var dialogbox = document.getElementById('dialogbox');
+		        dialogoverlay.style.display = "block";
+		        dialogoverlay.style.height = winH+"px";
+		        dialogbox.style.left = (winW/2) - (550 * .5)+"px";
+		        dialogbox.style.top = "100px";
+		        dialogbox.style.display = "block";
+		        document.getElementById('dialogboxhead').innerHTML = "Option Selected:";
+		        document.getElementById('dialogboxbody').innerHTML = dialog;
+		        document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Alert.ok()">OK</button>';
+    	}
+	this.ok = function()
+	{
+		document.getElementById('dialogbox').style.display = "none";
+		document.getElementById('dialogoverlay').style.display = "none";
+	}
+}
+var Alert = new CustomAlert();
+
+
+
+
+</script>	
+
+
+</html>

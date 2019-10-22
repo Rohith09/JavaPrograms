@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JavaScript drag & drop tutorial</title>
+</head>
+<body>
+  <div class="wrapper">
+      <div class="box">
+        <div id="task1" class="task" draggable="true">
+           task 1
+        </div>
+        <div id="task2" class="task" draggable="true">
+           task 2
+        </div>
+        <div id="task3" class="task" draggable="true">
+           task 3
+        </div>
+      </div>
+  </div>
+    
+  <div class="right">
+     
+    <div class="box1">
+    </div>
+      
+    <div class="box2">
+    </div>
+      
+    <div class="box3">
+    </div>
+    
+  </div>  
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+_________________
+
+
+
+
+
+body {
+  margin: 40px;
+}
+
+.wrapper {
+  position:absolute;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  width:120px;
+}
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  height: 90vh;
+}
+.box1,.box2,.box3 {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 150%;
+  height: 30vh;
+  margin-left:100px;
+}
+.box2 {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 150%;
+  height: 30vh;
+  margin-left:100px;
+  margin-top:10px;
+}
+.box3 {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 150%;
+  height: 30vh;
+  margin-left:100px;
+  margin-top:10px
+}
+.task {
+  background-color: pink;
+  color: black;
+  padding: 5px;
+  margin: 4px;
+}
+
+.right{
+  margin-left:30px;
+}
+
+
+
+
+
+
+
+
+
+________________________
+
+
+var dropTarget = document.querySelector(".right");
+var draggables = document.querySelectorAll(".task");
+
+for (i=0;i<draggables.length;i++)
+  {
+    draggables[i].addEventListener('dragstart',function(ev){
+      ev.dataTransfer.setData("srcId",ev.target.id);
+    });
+  }
+dropTarget.addEventListener('dragover',function(ev){
+  ev.preventDefault();
+},true);
+dropTarget.addEventListener('drop',function(ev){
+  ev.preventDefault();
+  target = ev.target;  //drop location
+  srcId = ev.dataTransfer.getData("srcId");
+  target.appendChild(document.getElementById(srcId),true);
+  
+});

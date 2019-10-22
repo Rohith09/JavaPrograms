@@ -1,0 +1,99 @@
+<html>
+<head>
+        <meta name=" viewport" content=" width=device-width" >
+        <title> Drag And Drop Implementation </title>
+</head>
+  
+  <body>
+    <div class="wrapper">
+        <div class="box1">
+            <div id="task1" class="task" draggable="true"> Member 1 </div>
+            <div id="task2" class="task" draggable="true"> Member 2 </div>
+            <div id="task3" class="task" draggable="true"> Member 3 </div>
+            <div id="task4" class="task" draggable="true"> Member 4 </div>
+            <div id="task5" class="task" draggable="true"> Member 5 </div>
+            <div id="task6" class="task" draggable="true"> Member 6 </div>
+            <div id="task7" class="task" draggable="true"> Member 7 </div>
+            <div id="task8" class="task" draggable="true"> Member 8 </div>
+            <div id="task9" class="task" draggable="true"> Member 9 </div> 
+        </div>
+
+        <div class="box2" id="box1">
+            <div class="team1" id="team1">
+              
+            </div>
+            <div class="team2" id="team2">
+              
+              </div>
+          
+            <div class="team3" id="team3">
+              
+              </div>
+            <div class="team4" id="team4">
+              
+              </div>
+        </div>
+   
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+var dropTarget = document.querySelector(".wrapper");
+var draggables = document.querySelectorAll(".task");
+
+
+
+for( i = 0; i < draggables.length; i++) {
+  draggables[i].addEventListener("dragstart", function (ev) {
+     ev.dataTransfer.setData("text", ev.target.id);
+  });
+}
+dropTarget.addEventListener('dragover', function(ev) {
+  ev.preventDefault();
+});
+
+dropTarget.addEventListener('drop', function(ev) {
+  ev.preventDefault();
+   target = ev.target;
+   
+   srcId = ev.dataTransfer.getData("text");
+  alert("A new member has been added to the team");
+  
+});
+
+
+/*
+function handleClick1()
+{
+  var member = document.getElementById("box1").querySelectorAll(".task");
+  for (var index = 0; index < member.length; index++) {
+   //x=member[index].getElementByClass(".task").textContent;
+   console.log(member[index].innerHTML); 
+
+  }
+}
+   
+function handleClick2()
+{
+  var member = document.getElementById("box2").querySelectorAll(".task");
+  for (var index = 0; index < member.length; index++) {
+   //x=member[index].getElementByClass(".task").textContent;
+   console.log(member[index].innerHTML); 
+  }
+}
+  
+function handleClick3()
+{
+  var member = document.getElementById("box3").querySelectorAll(".task");
+  for (var index = 0; index < member.length; index++) {
+   //x=member[index].getElementByClass(".task").textContent;
+   console.log(member[index].innerHTML); 
+  }  
+} 
+*/

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2019 by Rohith09 (http://jsbin.com/cafiduf/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JavaScript drag & drop tutorial</title>
+<style id="jsbin-css">
+
+body {
+  margin: 40px;
+}
+
+.wrapper {
+  position:absolute;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  width:120px;
+}
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  height: 90vh;
+}
+.box1,.box2,.box3 {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 150%;
+  height: 10vh;
+  margin-left:100px;
+}
+.box2 {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 150%;
+  height: 10vh;
+  margin-left:100px;
+  margin-top:10px;
+}
+.box3 {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 150%;
+  height: 10vh;
+  margin-left:100px;
+  margin-top:10px
+}
+.task {
+  background-color: pink;
+  color: black;
+  padding: 5px;
+  margin: 4px;
+  
+}
+
+.right{
+  margin-left:30px;
+}
+
+
+
+</style>
+</head>
+<body>
+  <div class="wrapper">
+      <div class="box">
+        <div id="task1" class="task" draggable="true">
+           task 1
+        </div>
+        <div id="task2" class="task" draggable="true">
+           task 2
+        </div>
+        <div id="task3" class="task" draggable="true">
+           task 3
+        </div>
+        <div id="task4" class="task" draggable="true">
+           task 4
+        </div>
+        <div id="task5" class="task" draggable="true">
+           task 5
+        </div>
+        <div id="task6" class="task" draggable="true">
+           task 6
+        </div>
+        <div id="task7" class="task" draggable="true">
+           task 7
+        </div>
+        <div id="task8" class="task" draggable="true">
+           task 8
+        </div>
+        <div id="task9" class="task" draggable="true">
+           task 9
+        </div>
+        
+      </div>
+  </div>
+    
+  <div class="right">
+     
+    <div class="box1" id="box1">Team 1</div>
+      
+    <div class="box2" id="box2"> Team2</div>
+    
+      
+    <div class="box3" id="box3"> Team3</div>
+    
+    
+  </div>  
+
+ 
+   
+
+
+
+
+
+<script id="jsbin-javascript">
+var dropTarget = document.querySelector(".right");
+var draggables = document.querySelectorAll(".task");
+var team1=[];
+var team2=[];
+var team3=[];
+for (i=0;i<draggables.length;i++)
+  {
+    draggables[i].addEventListener('dragstart',function(ev){
+      ev.dataTransfer.setData("srcId",ev.target.id);
+    });
+  }
+dropTarget.addEventListener('dragover',function(ev){
+  ev.preventDefault();
+},true);
+dropTarget.addEventListener('drop',function(ev){
+  ev.preventDefault();
+  target = ev.target;  //drop location
+  srcId = ev.dataTransfer.getData("srcId");
+  if (target.innerHTML=="Team 1")
+    {
+       console.log(srcId);
+    }
+  else if(target.innerHTML=="Team 2")
+    {
+      console.log(srcId);
+    }
+  else
+    {
+      console.log(srcId);
+    }
+  
+  
+});
+
+
+function showContextMenu()
+{
+  return false;
+}
+
+
+
+
+
+</script>
+</body>
+</html>
